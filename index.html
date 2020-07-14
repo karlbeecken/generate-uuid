@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="//cdn.rawgit.com/lil-js/uuid/0.1.0/uuid.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" integrity="sha256-aPeK/N8IHpHsvPBCf49iVKMdusfobKo2oxF8lRruWJg=" crossorigin="anonymous">    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Generate UUIDv4</title>
+    <script>
+        function genUUID() {
+            document.getElementById('input').value = lil.uuid()
+        }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div class="field">
+            <button class="button is-primary is-large" id="button" onclick="genUUID()">Generate a UUIDv4</button>
+        </div>
+        <div class="field">
+            <input class="input" type="text" id="input" placeholder="Text input">
+        </div>
+    </div>
+    <style>
+        #app {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 350px;
+            @media (max-width: 300) {
+                width: 250px;
+            }
+        }
+
+        #input {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
